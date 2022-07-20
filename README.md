@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Interplanetary Box
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Development
+
+### How to run the project
+1. Clone the repository
+2. Install dependencies using `npm install`
+3. Clone the file `.env.sample` into `.env` and replace with values
+4. Start the project using `npm start`
+
+Note: Make sure to use **Mumbai** network and have Mumbai faucet on your wallet in order to test.
 
 ## Available Scripts
 
