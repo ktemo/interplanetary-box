@@ -6,7 +6,7 @@
 1. Clone the repository
 2. Install dependencies using `npm install`
 3. Clone the file `.env.sample` into `.env` and replace with values
-4. Start the project using `npm start`
+4. Start the project using `npm run dev`
 
 Note: Make sure to use **Mumbai** network and have Mumbai faucet on your wallet in order to test.
 
@@ -14,7 +14,7 @@ Note: Make sure to use **Mumbai** network and have Mumbai faucet on your wallet 
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
