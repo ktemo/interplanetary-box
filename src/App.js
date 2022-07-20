@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { authenticate } from './utils/web3Profile';
+import { onFilePicked, onUploadFile } from './utils/fileManager';
+
 function App() {
   return (
     <div className="App">
@@ -10,12 +13,25 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          className="connect"
+          onClick={authenticate}
+          href="#"
           rel="noopener noreferrer"
         >
-          Learn React
+          Connect profile
+        </a>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={onFilePicked}/>
+
+        <a
+          className="connect"
+          onClick={onUploadFile}
+          href="#"
+          rel="noopener noreferrer"
+        >
+          Upload
         </a>
       </header>
     </div>
