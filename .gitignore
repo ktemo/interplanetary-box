@@ -43,3 +43,4 @@ yarn-error.log*
 # development 
 .vscode
 
+.next/server/pages-manifest.json
