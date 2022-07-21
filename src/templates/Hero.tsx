@@ -5,6 +5,7 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+import { ConnectMetamaskButtonComponent } from './ConnectWallet';
 import { Logo } from './Logo';
 
 const Hero = () => (
@@ -12,9 +13,7 @@ const Hero = () => (
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            <a>GitHub</a>
-          </Link>
+          <ConnectMetamaskButtonComponent />
         </li>
         <li>
           <Link href="/">
