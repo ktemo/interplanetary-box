@@ -34,3 +34,7 @@ yarn-error.log*
 .next/trace
 .next/server/pages-manifest.json
 .next/static/chunks/webpack.js
+.next/cache/webpack/server-development/1.pack
+.next/cache/webpack/server-development/3.pack
+.next/cache/webpack/server-development/index.pack
+.next/cache/webpack/server-development/index.pack.old
