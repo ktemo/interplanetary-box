@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Background } from '../background/Background';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
@@ -13,11 +11,6 @@ const Hero = () => (
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
           <ConnectMetamaskButtonComponent />
-        </li>
-        <li>
-          <Link href="/">
-            <a>Sign in</a>
-          </Link>
         </li>
       </NavbarTwoColumns>
     </Section>
