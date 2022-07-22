@@ -10,14 +10,21 @@ export default {
   },
 
   makeStorageClient() {
+    console.log(">> this.getAccessToken(): ", this.getAccessToken())
     return new Web3Storage({
       token: this.getAccessToken()
     })
   },
 
   async storeWithProgress(myFileList) {
+    if (!myFileList) {
+      console.log("Select a file first");
+      return;
+    }
+
     const files = [...myFileList]
-    console.log(">> files: ", files)
+    console.log(">> files: ", files[0])
+    let fileNames = [files[0].name];
     // TODO: Name the cab of files?
     // Now it is named based on date/time
 
@@ -32,7 +39,7 @@ export default {
 
     const onStoredChunk = size => {
       uploaded += size
-      const pct = totalSize / uploaded
+      const pct = 100 * (totalSize / uploaded)
       console.log(`Uploading... ${pct.toFixed(2)}% complete`)
       // TODO: let's get this to show in browser & update!
     }
@@ -42,9 +49,16 @@ export default {
 
     // client.put will invoke our callbacks during the upload
     // and return the root cid when the upload completes
-    return client.put(files, {
+    const cid = await client.put(files, {
       onRootCidReady,
       onStoredChunk
     })
+    console.log(">> Web3Storage cid: ", cid)
+    console.log(">> Web3Storage fileNames: ", fileNames)
+
+    return {
+      cid,
+      fileNames
+    };
   }
 }

@@ -4,8 +4,9 @@ import { AppProps } from 'next/app';
 import '../styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+
   return (
-    <ThirdwebProvider desiredChainId={ChainId.Mainnet}>
+    <ThirdwebProvider desiredChainId={ChainId.Mumbai}>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
