@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
-import { useSelectors } from '../store/selectors'
+import { useSelectors } from '../store/selectors';
 
 const Profile = () => {
-  const { userFiles, loadUserFiles } = useSelectors()
+  const { userFiles, loadUserFiles } = useSelectors();
 
   useEffect(() => {
     loadUserFiles();

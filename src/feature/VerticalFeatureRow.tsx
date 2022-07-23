@@ -4,7 +4,6 @@ type IVerticalFeatureRowProps = {
   file_name: string;
   ipfs_cid: string;
   file_type: string;
-  reverse?: boolean;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -12,10 +11,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     'mt-20',
     'flex',
     'flex-wrap',
-    'items-center',
-    {
-      'flex-row-reverse': props.reverse,
-    }
+    'items-center'
   );
 
   return (
