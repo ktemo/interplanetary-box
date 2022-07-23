@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState } from "react";
-import { useAddress } from '@thirdweb-dev/react';
 
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
@@ -12,9 +10,7 @@ const Profile = () => {
 
   const userData = () => {
     getUserFiles().then((data) => {
-      console.log('====================================');
-      console.log("Data from getUserFiles", data);
-      console.log('====================================');
+      console.log(">> Data from getUserFiles", data);
       setLoading(false);
       setVal(data);
     });
@@ -36,10 +32,9 @@ const Profile = () => {
   return (
     <Section title="Profile">
       <VerticalFeatureRow
-        title="Your title here"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-        image="/assets/images/feature.svg"
-        imageAlt="First feature alt text"
+        file_name="surge.png"
+        file_type="image"
+        ipfs_cid="bafybeifmvkpms6uzuy4abakbw37hkaojopsn7hnwvafley46h5lu35ckli"
       />
       <div>
         {val.map((e, i) => {
@@ -47,7 +42,6 @@ const Profile = () => {
         })}
       </div>
     </Section>
-
   );
 };
 

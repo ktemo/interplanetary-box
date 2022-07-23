@@ -1,11 +1,9 @@
 import className from 'classnames';
-import { useRouter } from 'next/router';
 
 type IVerticalFeatureRowProps = {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
+  file_name: string;
+  ipfs_cid: string;
+  file_type: string;
   reverse?: boolean;
 };
 
@@ -20,17 +18,15 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     }
   );
 
-  const router = useRouter();
-
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full sm:w-1/2 text-center sm:px-6">
-        <h3 className="text-3xl text-gray-900 font-semibold">{props.title}</h3>
-        <div className="mt-6 text-xl leading-9">{props.description}</div>
+        <h3 className="text-3xl text-gray-900 font-semibold">{props.file_name}</h3>
+        <div className="mt-6 text-xl leading-9">{props.file_type}</div>
       </div>
 
       <div className="w-full sm:w-1/2 p-6">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        <img src={`${props.ipfs_cid}.ipfs.dweb.link/${props.file_name}`} />
       </div>
     </div>
   );
