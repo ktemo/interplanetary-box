@@ -1,21 +1,22 @@
 import { useEffect } from "react";
+
 import { useAddress } from '@thirdweb-dev/react';
 
+import { Section } from "../layout/Section";
 import { onFilePicked, onUploadFile, getUserFiles } from '../utils/fileManager';
+
 
 const FileManagerDashboard = () => {
   const address = useAddress();
   let files;
 
   return (
-    <div>
-        <ul>
-
-        </ul>
+    <Section>
+      <div>
         <input
           type="file"
           accept="image/*"
-          onChange={onFilePicked}/>
+          onChange={onFilePicked} />
 
         <a
           className="connect"
@@ -25,7 +26,9 @@ const FileManagerDashboard = () => {
         >
           Upload
         </a>
-    </div>
+      </div>
+    </Section>
+
   );
 };
 
