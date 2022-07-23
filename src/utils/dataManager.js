@@ -35,13 +35,11 @@ export default {
 
       window.assetTrackerTable = name;
     } else {
-
       window.assetTrackerTable = existingTables[0].name;
     }
 
     console.log(">> window.assetTrackerTable: ", window.assetTrackerTable);
     window.tableland = tableland;
-    return tableland;
   },
 
   async linkFileToUser(cid, fileName) {

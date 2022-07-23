@@ -1,12 +1,13 @@
 import { ThirdwebProvider, ChainId } from '@thirdweb-dev/react';
 import { AppProps } from 'next/app';
-import { StoreProvider } from '../store/zustandProvider'
-import { useHydrate } from '../store/index'
+
+import { useHydrate } from '../store/index';
+import { StoreProvider } from '../store/zustandProvider';
 
 import '../styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const store = useHydrate(pageProps.initialZustandState)
+  const store = useHydrate(pageProps.initialZustandState);
 
   return (
     <StoreProvider store={store}>
