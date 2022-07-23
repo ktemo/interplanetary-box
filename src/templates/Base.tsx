@@ -2,12 +2,12 @@ import { useAddress } from '@thirdweb-dev/react';
 
 import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
+import { FileManagerDashboard } from './FileManager';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { Nav } from './Nav';
 import { Profile } from './Profile';
 import { VerticalFeatures } from './VerticalFeatures';
-import { FileManagerDashboard } from './FileManager';
 
 const Base = () => {
   const address = useAddress();
@@ -17,6 +17,7 @@ const Base = () => {
         <Meta title={AppConfig.title} description={AppConfig.description} />
         <Nav />
         <Profile />
+        <FileManagerDashboard />
         <Footer />
       </div>
     );
@@ -27,7 +28,6 @@ const Base = () => {
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Nav />
       <Hero />
-      <FileManagerDashboard />
       <VerticalFeatures />
       <Footer />
     </div>
