@@ -5,7 +5,7 @@ export default {
     // Connect to the Tableland testnet (defaults to Goerli testnet)
     // @return {Connection} Interface to access the Tableland network and target chain
     // TODO: move the connection params to config parameters
-    const tableland = await connect({ 
+    const tableland = await connect({
       network: "testnet",
       chain: "polygon-mumbai"
     });
@@ -29,10 +29,10 @@ export default {
       // Create a new table with a supplied SQL schema and optional `prefix`
       // @return {Connection} Connection object, including the table's `name`
       const { name } = await tableland.create(`file_name TEXT, file_type TEXT, ipfs_cid TEXT, provider TEXT, ipfs_gateway TEXT`, 'AssetTracker');
-      
+
       // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
       console.log("new table name: ", name);
-      
+
       window.assetTrackerTable = name;
     } else {
 
@@ -67,7 +67,7 @@ export default {
   async getUserFiles() {
     if (!window.tableland) {
       console.log(">> sign in first!");
-      return null;
+      return [];
     }
 
     // Insert a row into the table
