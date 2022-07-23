@@ -14,13 +14,13 @@ export const ConnectMetamaskButtonComponent = () => {
   const { loadUserFiles } = useSelectors();
 
   async function connectProfile(address) {
-      const { id } = await ceramicAuthenticate(address=address);
+    const { id } = await ceramicAuthenticate(address = address);
 
-      console.log(">> ceramic id: ", id)
-      if (id) {
-        await dataManager.default.createUserDataStorage(id);
-        loadUserFiles();
-      }
+    console.log(">> ceramic id: ", id)
+    if (id) {
+      await dataManager.default.createUserDataStorage(id);
+      loadUserFiles();
+    }
   }
 
   // const connectWithCoinbaseWallet = useCoinbaseWallet();
@@ -42,9 +42,7 @@ export const ConnectMetamaskButtonComponent = () => {
   if (address) {
     return (
       <div>
-        Address: <br /> {address}
-        <br />
-        Chain ID: {network[0].data.chain && network[0].data.chain.id}
+        {address}
         <br />
         <button onClick={disconnectWallet}>Disconnect</button>
       </div>

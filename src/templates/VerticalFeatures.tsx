@@ -1,28 +1,27 @@
+import React, { useEffect } from "react";
+
 import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
+import { useSelectors } from '../store/selectors';
 
-const VerticalFeatures = () => (
-  <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
-  >
-    <VerticalFeatureRow
-      file_name="Your title here"
-      file_type="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      ipfs_cid="/assets/images/feature.svg"
-    />
-    <VerticalFeatureRow
-      file_name="Your title here"
-      file_type="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      ipfs_cid="/assets/images/feature.svg"
-      reverse
-    />
-    <VerticalFeatureRow
-      file_name="Your title here"
-      file_type="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      ipfs_cid="/assets/images/feature.svg"
-    />
-  </Section>
-);
+const VerticalFeatures = () => {
+  const { userFiles, loadUserFiles } = useSelectors();
+
+  useEffect(() => {
+    loadUserFiles();
+  }, []);
+
+  return (
+    <Section title="All Items in Storage">
+      {userFiles.map((e, i) => {
+        return <VerticalFeatureRow
+          file_name={e.file_name}
+          file_type={e.file_type}
+          ipfs_cid={e.ipfs_cid}
+        />
+      })}
+    </Section>
+  );
+}
 
 export { VerticalFeatures };
