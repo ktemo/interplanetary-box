@@ -26,7 +26,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full sm:w-1/2 p-6">
-        <img src={`${props.ipfs_cid}.ipfs.dweb.link/${props.file_name}`} />
+        <img src={`https://${props.ipfs_cid}.ipfs.dweb.link/${props.file_name}`} />
       </div>
     </div>
   );

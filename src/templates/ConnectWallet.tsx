@@ -7,15 +7,19 @@ import {
 import { useEffect } from "react";
 import { ceramicAuthenticate } from '../utils/web3Profile';
 import * as dataManager from '../utils/dataManager'
+import { useSelectors } from '../store/selectors'
 
 
 export const ConnectMetamaskButtonComponent = () => {
+  const { loadUserFiles } = useSelectors();
+
   async function connectProfile(address) {
       const { id } = await ceramicAuthenticate(address=address);
+
       console.log(">> ceramic id: ", id)
       if (id) {
         await dataManager.default.createUserDataStorage(id);
-        await dataManager.default.getUserFiles();
+        loadUserFiles();
       }
   }
 

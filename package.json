@@ -28,7 +28,8 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.7.4",
     "web3.storage": "^4.3.0",
-    "web3modal": "^1.9.8"
+    "web3modal": "^1.9.8",
+    "zustand": "^4.0.0-rc.4"
   },
   "scripts": {
     "dev": "next dev",
