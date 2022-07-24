@@ -44,7 +44,7 @@ export const ConnectMetamaskButtonComponent = () => {
       <div>
         {address}
         <br />
-        <button onClick={disconnectWallet}>Disconnect</button>
+        <button onClick={disconnectWallet} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Disconnect</button>
       </div>
     );
   }
@@ -55,7 +55,7 @@ export const ConnectMetamaskButtonComponent = () => {
       {/* <button onClick={() => connectWithCoinbaseWallet()}>
         Connect Coinbase Wallet
       </button> */}
-      <button onClick={() => connectWithMetamask()}>Connect MetaMask</button>
+      <button onClick={() => connectWithMetamask()} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Connect MetaMask</button>
       {/* <button onClick={() => connectWithWalletConnect()}>
         Connect WalletConnect
       </button> */}
