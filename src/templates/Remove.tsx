@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SendDoc() {
+export default function Remove() {
     const [showModal, setShowModal] = React.useState(false);
     return (
         <>
@@ -67,4 +67,4 @@ export default function SendDoc() {
     );
 }
 
-export { SendDoc };
+export { Remove };

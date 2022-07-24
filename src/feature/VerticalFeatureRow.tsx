@@ -1,5 +1,5 @@
 import className from 'classnames';
-import SendDoc from '../templates/SendDoc';
+import Remove from '../templates/Remove';
 
 type IVerticalFeatureRowProps = {
   file_name: string;
@@ -22,7 +22,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mt-6 text-xl leading-9">FIle Type: {props.file_type}</div>
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Share</button>
 
-        <SendDoc />
+        <Remove />
       </div>
 
       <div className="w-full sm:w-1/2 p-6">
