@@ -4,11 +4,17 @@ type IFileItemProps = {
   file_name: string;
   ipfs_cid: string;
   file_type: string;
+  file: Object;
 };
 
 const FileItem = (props: IFileItemProps) => {
   const fileItemClass = className(
   );
+
+  // let itemVisible = <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> ;
+  // if (props.file.visible) {
+  //   itemVisible = <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> ;
+  // }
 
   return (
     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">

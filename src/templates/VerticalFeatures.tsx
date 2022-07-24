@@ -12,7 +12,7 @@ const VerticalFeatures = () => {
   }, []);
 
   return (
-    <Section title="All Items in Storage">
+    <Section title="Public content shared by users">
       {/* {userFiles.map((e, i) => {
         return <VerticalFeatureRow
           file_name={e.file_name}

@@ -1,4 +1,6 @@
 import { connect, resultsToObjects } from "@tableland/sdk";
+//import { useSelectors } from '../store/selectors';
+
 
 export default {
   async createUserDataStorage() {
@@ -11,13 +13,14 @@ export default {
     });
     await tableland.siwe();
 
-    const address = await tableland.signer.getAddress();
-    console.log(">> tableland signer: ", address)
+    //const address = await tableland.signer.getAddress();
+    //console.log(">> tableland signer: ", address)
 
     // we look for exisiting table to avoid re-create a new one
     // TODO: make the chain id a config parameter
     const hashRes = await tableland.hash('CREATE TABLE AssetTracker_80001 (file_name TEXT, file_type TEXT, ipfs_cid TEXT, provider TEXT, ipfs_gateway TEXT);')
     const appTableStructure = hashRes.structureHash;
+    console.log(">> appTableStructure: ", appTableStructure);
 
     const tables = await tableland.list(); // returns an Object with the Tables the connected address owns
     console.log(">> all tables: ", tables)
