@@ -16,6 +16,7 @@
     "@thirdweb-dev/sdk": "^2.3.31",
     "classnames": "^2.3.1",
     "dids": "^3.0.0",
+    "flowbite": "^1.5.1",
     "key-did-provider-ed25519": "^2.0.1",
     "next": "^12.2.2",
     "next-seo": "^4.29.0",

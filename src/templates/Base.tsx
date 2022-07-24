@@ -16,7 +16,6 @@ const Base = () => {
       <div className="antialiased text-gray-600">
         <Meta title={AppConfig.title} description={AppConfig.description} />
         <Nav />
-        <Profile />
         <FileManagerDashboard />
         <Footer />
       </div>
