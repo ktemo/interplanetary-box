@@ -19,6 +19,7 @@ const Profile = () => {
           file_type={e.file_type}
           ipfs_cid={e.ipfs_cid}
         />
+
       })}
     </Section>
   );

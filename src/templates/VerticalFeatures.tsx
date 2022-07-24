@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
+import { LandingPageStub } from '../feature/LandingPageStub';
 import { Section } from '../layout/Section';
 import { useSelectors } from '../store/selectors';
 
@@ -20,10 +20,22 @@ const VerticalFeatures = () => {
           ipfs_cid={e.ipfs_cid}
         />
       })} */}
-
-      <img class="object-none object-left object-cover h-48 w-48" src="../../logo192.png" alt="image of react logo" />
-      <img class="object-none object-left object-scale-down h-48 w-48" src="../../surge.png" alt="image of surge woman" />
-
+      <LandingPageStub
+        file_name="rainbow.jpg"
+        img="../../rainbow.jpg"
+      />
+      <LandingPageStub
+        file_name="surge.png"
+        img="../../surge.png"
+      />
+      <LandingPageStub
+        file_name="bottle.jpg"
+        img="../../bottle.jpg"
+      />
+      <LandingPageStub
+        file_name="bubbles.jpg"
+        img="../../bubbles.jpg"
+      />
     </Section>
   );
 };
