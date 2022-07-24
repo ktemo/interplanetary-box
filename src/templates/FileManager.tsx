@@ -14,7 +14,7 @@ const FileManagerDashboard = () => {
       <div>
         <input
           type="file"
-          accept="image/*"
+          accept="/*"
           onChange={onFilePicked} />
 
         <button
